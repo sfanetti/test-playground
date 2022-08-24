@@ -21,6 +21,7 @@ export default function CheckBlock() {
                     height: '3rem',
                     cursor: 'pointer'
                  }} 
+                 data-test-checkblock-input
                  type="checkbox"
                  value={checked}
                  onChange={toggleChecked}
