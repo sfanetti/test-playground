@@ -19,16 +19,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Testing Playground</h1>
-        <button 
-          type='button'
-          data-test-button-switch-color
-          aria-label='switch colors'
-          disabled={isDisabled}
-          style={{backgroundColor: buttonColor}}
-          onClick={changeButtonColor}>
-            Change button color to {inverseColor}
-        </button>
-        <CheckBlock isDisabled={isDisabled} setIsDisabled={setIsDisabled}/>
+        {
+          // Add your button and checkbox here
+        }
       </header>
     </div>
   );
