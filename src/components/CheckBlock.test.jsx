@@ -7,3 +7,7 @@ test('it renders the checkblock input', () => {
     const checkbox = container.querySelector('[data-test-checkblock-input]')
     expect(checkbox).toBeInTheDocument();
 });
+
+test('it changes the outline when the checkbox is checked', () => {
+    
+});

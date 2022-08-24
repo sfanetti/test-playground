@@ -6,9 +6,9 @@ function getOppositeColor (color) {
   return color === 'blue' ? 'green' : 'blue';
 }
 
-
 function App() {
   const [buttonColor, setButtonColor] = useState('blue');
+  const [isDisabled, setIsDisabled] = useState(false);
   function changeButtonColor(e) {
     e.preventDefault();
     const newColor = getOppositeColor(buttonColor)
@@ -22,11 +22,14 @@ function App() {
         <h1>Testing Playground</h1>
         <button 
           type='button'
+          data-test-button-switch-color
+          aria-label='switch colors'
+          disabled={isDisabled}
           style={{backgroundColor: buttonColor}}
           onClick={changeButtonColor}>
             Change button color to {inverseColor}
         </button>
-        <CheckBlock/>
+        <CheckBlock isDisabled={isDisabled} setIsDisabled={setIsDisabled}/>
       </header>
     </div>
   );

@@ -1,22 +1,16 @@
-import { useState } from "react";
-
-export default function CheckBlock() {
-    const [checked, setChecked] = useState(false);
-    function getStyle(checked) {
-        return checked ? '0.3rem solid red' : '0.3rem dotted grey';
-    }
-    function toggleChecked() {
-        setChecked(!checked);
+export default function CheckBlock({ setIsDisabled, isDisabled }) {
+    function getStyle(isDisabled) {
+        return isDisabled ? '0.3rem solid red' : '0.3rem dotted grey';
     }
     return <div 
             style={{ 
-                border: getStyle(checked), 
+                border: getStyle(isDisabled), 
                 padding: '2rem 3rem', 
                 margin: '3rem',
                 borderRadius: '1rem',
                 minWidth: '30vw'
             }}>
-                <h3>The checked value is {checked ? 'true' : 'false'}</h3>
+                <h3>The disabled value is {isDisabled ? 'true' : 'false'}</h3>
                 <input 
                  style={{
                     width: '3rem', 
@@ -25,8 +19,8 @@ export default function CheckBlock() {
                  }} 
                  data-test-checkblock-input
                  type="checkbox"
-                 value={checked}
-                 onChange={toggleChecked}
+                 value={isDisabled}
+                 onChange={() => setIsDisabled(!isDisabled)}
                 />
     </div>
 }
