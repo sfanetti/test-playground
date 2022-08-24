@@ -9,8 +9,7 @@ function getOppositeColor (color) {
 function App() {
   const [buttonColor, setButtonColor] = useState('blue');
   const [isDisabled, setIsDisabled] = useState(false);
-  function changeButtonColor(e) {
-    e.preventDefault();
+  function changeButtonColor() {
     const newColor = getOppositeColor(buttonColor)
     setButtonColor(newColor);
   }

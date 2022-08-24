@@ -10,7 +10,7 @@ export default function CheckBlock({ setIsDisabled, isDisabled }) {
                 borderRadius: '1rem',
                 minWidth: '30vw'
             }}>
-                <h3>The disabled value is {isDisabled ? 'true' : 'false'}</h3>
+                <h3>The button is {isDisabled ? 'disabled' : 'enabled'}</h3>
                 <input 
                  style={{
                     width: '3rem', 
