@@ -1,22 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import CheckBlock from './components/CheckBlock';
+
+function getOppositeColor (color) {
+  return color === 'blue' ? 'green' : 'blue';
+}
+
 
 function App() {
+  const [buttonColor, setButtonColor] = useState('blue');
+  function changeButtonColor(e) {
+    e.preventDefault();
+    const newColor = getOppositeColor(buttonColor)
+    setButtonColor(newColor);
+  }
+
+  const inverseColor = getOppositeColor(buttonColor);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Testing Playground</h1>
+        <button 
+          type='button'
+          style={{backgroundColor: buttonColor}}
+          onClick={changeButtonColor}>
+            Change button color to {inverseColor}
+        </button>
+        <CheckBlock/>
       </header>
     </div>
   );
