@@ -12,7 +12,9 @@ export default function CheckBlock() {
             style={{ 
                 border: getStyle(checked), 
                 padding: '2rem 3rem', 
-                margin: '3rem'
+                margin: '3rem',
+                borderRadius: '1rem',
+                minWidth: '30vw'
             }}>
                 <h3>The checked value is {checked ? 'true' : 'false'}</h3>
                 <input 

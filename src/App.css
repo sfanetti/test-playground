@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #bcbcbc;
+  background-color: #e9e9e9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,8 @@
 
 button {
   padding: 2rem 3rem;
+  width: 40vw;
+  min-width: 400px;
   font-weight: 600;
   font-size: 2rem;
   border-radius: .5rem;
